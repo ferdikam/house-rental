@@ -1,4 +1,4 @@
-
+import store from './store/store'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./burger');
 
 window.Vue = require('vue');
 
@@ -15,8 +16,14 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+
+Vue.component('commune-form', require('./components/commune/CommuneForm.vue'));
+Vue.component('commune-list', require('./components/commune/CommuneList.vue'));
+
+Vue.component('type-logement-list', require('./components/typeLogement/TypeLogementList.vue'))
+Vue.component('type-logement-form', require('./components/typeLogement/TypeLogementForm.vue'))
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store
 });

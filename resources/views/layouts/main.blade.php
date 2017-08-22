@@ -15,9 +15,19 @@
 </head>
 <body>
 <div id="app">
+
     @include('layouts.partials.nav')
 
-    @yield('content')
+    <div class="subnav p-t-15 p-b-15 has-shadow">
+        <div class="container">
+            @yield('subnav')
+        </div>
+    </div><!-- end subnav -->
+
+    <div class="container m-t-50">
+        @yield('content')
+    </div>
+
 </div>
 
 <!-- Scripts -->

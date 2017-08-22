@@ -12,3 +12,25 @@
 
 // Other SCSS Files
 @import "spacing-helpers";
+
+
+/* GENERAL */
+html{
+  background-color: $body-background;
+}
+
+
+/* NAVBAR */
+.navbar{
+  border-top: 2px solid $border-color;
+  border-bottom: 1px solid $white-ter;
+}
+
+/* SUBNAV */
+.subnav{
+  background-color: $white;
+
+  &.has-shadow{
+    box-shadow: rgba(10, 10, 10, 0.1) 0px 2px 3px;
+  }
+}
